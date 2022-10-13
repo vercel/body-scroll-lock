@@ -122,14 +122,14 @@ const setPositionFixed = () => window.requestAnimationFrame(() => {
     document.body.style.top = `${-scrollY}px`;
     document.body.style.left = `${-scrollX}px`;
 
-    setTimeout(() => window.requestAnimationFrame(() => {
-      // Attempt to check if the bottom bar appeared due to the position change
-      const bottomBarHeight = innerHeight - window.innerHeight;
-      if (bottomBarHeight && scrollY >= innerHeight) {
-        // Move the content further up so that the bottom bar doesn't hide it
-        document.body.style.top = `-${scrollY + bottomBarHeight}px`;
-      }
-    }), 300)
+    // setTimeout(() => window.requestAnimationFrame(() => {
+    //   // Attempt to check if the bottom bar appeared due to the position change
+    //   const bottomBarHeight = innerHeight - window.innerHeight;
+    //   if (bottomBarHeight && scrollY >= innerHeight) {
+    //     // Move the content further up so that the bottom bar doesn't hide it
+    //     document.body.style.top = `-${scrollY + bottomBarHeight}px`;
+    //   }
+    // }), 300)
   }
 });
 
